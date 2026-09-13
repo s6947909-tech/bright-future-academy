@@ -17,7 +17,8 @@ document.querySelectorAll('nav a').forEach(function(link) {
             event.preventDefault();
 
             targetSection.scrollIntoView({
-                behavior: 'smooth'
+                behavior: 'smooth',
+                block: 'start'
             });
 
         }
@@ -39,7 +40,9 @@ const joinButton =
 
 if (joinButton) {
 
-    joinButton.addEventListener('click', function() {
+    joinButton.addEventListener('click', function(event) {
+
+        event.preventDefault();
 
         const admissionSection =
             document.querySelector('#admission');
@@ -47,7 +50,8 @@ if (joinButton) {
         if (admissionSection) {
 
             admissionSection.scrollIntoView({
-                behavior: 'smooth'
+                behavior: 'smooth',
+                block: 'start'
             });
 
         }
