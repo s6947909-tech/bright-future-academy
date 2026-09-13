@@ -147,48 +147,229 @@
         </p>
 
     </section>
+ 
+ <!-- ================= ADMISSIONS ================= -->
+
+<section id="admission">
+
+    <h2>Admissions</h2>
+
+    <h3>3-Day Free Demo Classes</h3>
+
+    <p>
+        New students can attend 3 days of demo classes
+        before deciding to join the academy.
+    </p>
+
+    <h3>Monthly Fee</h3>
+
+    <p>
+        <strong>₹1,000 per month</strong>
+    </p>
+
+    <p>
+        Admission Fee: <strong>FREE</strong>
+    </p>
+
+    <p>
+        No Entrance / Admission Exam
+    </p>
+
+    <p>
+        No Extra Hidden Charges
+    </p>
+
+    <h3>Class Timing</h3>
+
+    <p>
+        <strong>3:30 PM – 6:00 PM</strong>
+    </p>
 
 
-    <!-- ================= ADMISSIONS ================= -->
+    <!-- Admission Form -->
 
-    <section id="admission">
+    <div class="admission-form">
 
-        <h2>Admissions</h2>
-
-        <h3>3-Day Free Demo Classes</h3>
+        <h3>Apply for Admission</h3>
 
         <p>
-            New students can attend
-            <strong>3 days of demo classes</strong>
-            before deciding to join the academy.
+            Fill in your details and our academy will contact you.
         </p>
 
-        <h3>Monthly Fee</h3>
+        <form id="admissionForm">
 
-        <p>
-            <strong>₹1,000 per month</strong>
+            <label for="studentName">
+                Student Name
+            </label>
+
+            <input
+                type="text"
+                id="studentName"
+                name="studentName"
+                placeholder="Enter student name"
+                required>
+
+
+            <label for="parentName">
+                Parent / Guardian Name
+            </label>
+
+            <input
+                type="text"
+                id="parentName"
+                name="parentName"
+                placeholder="Enter parent / guardian name"
+                required>
+
+
+            <label for="mobile">
+                Mobile Number
+            </label>
+
+            <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                placeholder="Enter 10-digit mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required>
+
+
+            <label for="class">
+                Select Class
+            </label>
+
+            <select id="class" name="class" required>
+
+                <option value="">
+                    Select your class
+                </option>
+
+                <option value="Class 6">
+                    Class 6
+                </option>
+
+                <option value="Class 7">
+                    Class 7
+                </option>
+
+                <option value="Class 8">
+                    Class 8
+                </option>
+
+                <option value="Class 9">
+                    Class 9
+                </option>
+
+                <option value="Class 10">
+                    Class 10
+                </option>
+
+                <option value="Class 11">
+                    Class 11
+                </option>
+
+                <option value="Class 12">
+                    Class 12
+                </option>
+
+            </select>
+
+
+            <label for="course">
+                Subject / Course
+            </label>
+
+            <select id="course" name="course" required>
+
+                <option value="">
+                    Select subject / course
+                </option>
+
+                <option value="All Subjects">
+                    All Subjects
+                </option>
+
+                <option value="Maths & Science">
+                    Maths & Science
+                </option>
+
+                <option value="PCMB">
+                    PCMB
+                </option>
+
+                <option value="Commerce">
+                    Commerce
+                </option>
+
+                <option value="Accounts">
+                    Accounts
+                </option>
+
+                <option value="Business Studies">
+                    Business Studies
+                </option>
+
+                <option value="Economics">
+                    Economics
+                </option>
+
+            </select>
+
+
+            <label for="demoDate">
+                Preferred Demo Date
+            </label>
+
+            <input
+                type="date"
+                id="demoDate"
+                name="demoDate"
+                required>
+
+
+            <label for="address">
+                Address
+            </label>
+
+            <textarea
+                id="address"
+                name="address"
+                rows="3"
+                placeholder="Enter your address"
+                required></textarea>
+
+
+            <label for="message">
+                Message / Query
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="3"
+                placeholder="Any question or additional information"></textarea>
+
+
+            <button
+                type="submit"
+                class="submit-btn">
+                Submit Application
+            </button>
+
+        </form>
+
+        <p
+            id="formMessage"
+            class="form-message">
         </p>
 
-        <p>
-            Admission Fee: <strong>FREE</strong>
-        </p>
+    </div>
 
-        <p>
-            No Entrance / Admission Exam
-        </p>
+</section>
 
-        <p>
-            No Extra Hidden Charges
-        </p>
-
-        <h3>Class Timing</h3>
-
-        <p>
-            <strong>3:30 PM – 6:00 PM</strong>
-        </p>
-
-    </section>
-
+ 
 
     <!-- ================= WHY CHOOSE US ================= -->
 
