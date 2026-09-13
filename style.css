@@ -282,3 +282,75 @@ footer h3 {
     }
 
 }
+/* ================= ADMISSION FORM ================= */
+
+.admission-form {
+    margin-top: 25px;
+    padding: 25px;
+    background: #f4f8ff;
+    border-radius: 15px;
+    border: 1px solid #dbe9ff;
+}
+
+.admission-form h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.admission-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c7d8ed;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    background: white;
+    outline: none;
+}
+
+.admission-form input:focus,
+.admission-form select:focus,
+.admission-form textarea:focus {
+    border-color: #1976d2;
+}
+
+.admission-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 22px;
+    background: #1976d2;
+}
+
+.submit-btn:hover {
+    background: #0d47a1;
+}
+
+.form-message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* ================= MOBILE FORM ================= */
+
+@media (max-width: 600px) {
+
+    .admission-form {
+        padding: 18px;
+    }
+
+}
