@@ -1,7 +1,7 @@
 /* ================= BRIGHT FUTURE ACADEMY ================= */
 
 
-/* Smooth scrolling for navigation links */
+/* Smooth scrolling */
 
 document.querySelectorAll('nav a').forEach(function(link) {
 
@@ -26,12 +26,7 @@ document.querySelectorAll('nav a').forEach(function(link) {
 });
 
 
-/* ================= WELCOME MESSAGE ================= */
-
-console.log("Welcome to Bright Future Academy");
-
-
-/* ================= JOIN BUTTON ================= */
+/* Join button */
 
 const joinButton = document.querySelector('#home button');
 
@@ -39,7 +34,8 @@ if (joinButton) {
 
     joinButton.addEventListener('click', function() {
 
-        const admissionSection = document.querySelector('#admission');
+        const admissionSection =
+            document.querySelector('#admission');
 
         if (admissionSection) {
 
@@ -48,6 +44,30 @@ if (joinButton) {
             });
 
         }
+
+    });
+
+}
+
+
+/* Admission Form */
+
+const admissionForm =
+    document.querySelector('#admissionForm');
+
+const formMessage =
+    document.querySelector('#formMessage');
+
+if (admissionForm) {
+
+    admissionForm.addEventListener('submit', function(event) {
+
+        event.preventDefault();
+
+        formMessage.textContent =
+            "Thank you! Your application has been submitted.";
+
+        admissionForm.reset();
 
     });
 
