@@ -59,3 +59,29 @@ if (joinButton) {
     });
 
 }
+
+/* ================= FEES DROPDOWN ================= */
+
+function toggleFee(feeId) {
+
+    const feeBox = document.getElementById(feeId);
+
+    if (!feeBox) {
+        return;
+    }
+
+    /* Close other fee boxes */
+    document.querySelectorAll('.fee-details').forEach(function(box) {
+
+        if (box.id !== feeId) {
+            box.classList.remove('active');
+        }
+
+    });
+
+
+    /* Open / close selected fee box */
+    feeBox.classList.toggle('active');
+
+}
+
