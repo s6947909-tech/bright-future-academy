@@ -113,7 +113,7 @@ li {
 }
 
 
-/* ================= BUTTON ================= */
+/* ================= GENERAL BUTTON ================= */
 
 button {
     background: #ff9800;
@@ -154,6 +154,7 @@ button:hover {
     border-radius: 8px;
 }
 
+
 /* ================= FEES ================= */
 
 #fees {
@@ -173,7 +174,7 @@ button:hover {
 }
 
 
-/* ================= CLASS LIST ================= */
+/* ================= CLASS FEE LIST ================= */
 
 .fee-class-list {
     max-width: 700px;
@@ -185,11 +186,10 @@ button:hover {
 }
 
 
-/* ================= CLASS BUTTON ================= */
+/* ================= CLASS FEE BUTTON ================= */
 
 .class-fee-btn {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -206,7 +206,6 @@ button:hover {
     font-weight: bold;
 
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -216,7 +215,7 @@ button:hover {
 }
 
 .plus-icon {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1;
 }
 
@@ -305,7 +304,7 @@ button:hover {
 }
 
 
-/* ================= ANIMATION ================= */
+/* ================= FEE ANIMATION ================= */
 
 @keyframes feeOpen {
 
@@ -322,19 +321,16 @@ button:hover {
 }
 
 
-/* ================= BOTTOM NOTICE ================= */
+/* ================= FEE NOTICE ================= */
 
 .fee-bottom-notice {
     max-width: 700px;
-
     margin: 25px auto 0;
 }
 
 .fee-bottom-notice p {
     padding: 13px;
-
     margin: 10px 0;
-
     border-radius: 10px;
 }
 
@@ -353,183 +349,6 @@ button:hover {
     color: #e65100;
 }
 
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 600px) {
-
-    #fees {
-        padding: 25px 15px;
-    }
-
-    #fees h2 {
-        font-size: 26px;
-    }
-
-    .class-fee-btn {
-        padding: 15px 16px;
-        font-size: 17px;
-    }
-
-    .fee-details {
-        padding: 15px;
-    }
-
-    .discount-box {
-        font-size: 16px;
-    }
-
-}
-
-/* ================= CLASS FEE LIST ================= */
-
-.fee-class-list {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.fee-item {
-    margin-bottom: 12px;
-}
-
-
-/* ================= CLASS BUTTON ================= */
-
-.class-fee-btn {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 16px 20px;
-
-    background: #eaf3ff;
-    color: #0d47a1;
-
-    border: 2px solid #d4e6ff;
-    border-radius: 12px;
-
-    font-size: 18px;
-    font-weight: bold;
-
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.class-fee-btn:hover {
-    background: #dcecff;
-    transform: translateY(-2px);
-}
-
-.class-fee-btn span {
-    font-size: 24px;
-}
-
-
-/* ================= FEE DETAILS ================= */
-
-.fee-details {
-    display: none;
-
-    margin-top: 8px;
-    padding: 18px;
-
-    background: white;
-
-    border: 1px solid #dbe9ff;
-    border-radius: 12px;
-
-    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.10);
-
-    text-align: left;
-
-    animation: feeOpen 0.25s ease;
-}
-
-.fee-details.active {
-    display: block;
-}
-
-.fee-details h3 {
-    margin: 0 0 15px;
-    color: #1976d2;
-    text-align: center;
-}
-
-.fee-details p {
-    margin: 10px 0;
-    padding: 12px;
-
-    background: #f4f8ff;
-    border-radius: 8px;
-
-    color: #333;
-}
-
-
-/* ================= ANIMATION ================= */
-
-@keyframes feeOpen {
-
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-
-/* ================= BOTTOM NOTICE ================= */
-
-.fee-bottom-notice {
-    margin-top: 25px;
-}
-
-.fee-bottom-notice p {
-    padding: 13px;
-    margin: 10px 0;
-
-    border-radius: 10px;
-}
-
-.fee-bottom-notice p:first-child {
-    background: #e8f5e9;
-    color: #1b5e20;
-}
-
-.fee-bottom-notice p:last-child {
-    background: #fff8e1;
-    color: #795548;
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 600px) {
-
-    #fees {
-        padding: 25px 15px;
-    }
-
-    #fees h2 {
-        font-size: 26px;
-    }
-
-    .class-fee-btn {
-        padding: 15px 16px;
-        font-size: 17px;
-    }
-
-    .fee-details {
-        padding: 15px;
-    }
-
-}
 
 /* ================= TEACHERS ================= */
 
@@ -596,12 +415,17 @@ button:hover {
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 15px;
+
     padding: 12px 22px;
+
     background: #1976d2;
     color: white !important;
+
     text-decoration: none;
     border-radius: 25px;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
@@ -629,13 +453,19 @@ button:hover {
 
 .apply-btn {
     display: inline-block;
+
     padding: 14px 28px;
+
     background-color: #0066cc;
     color: #ffffff !important;
+
     text-decoration: none;
+
     border-radius: 8px;
+
     font-weight: bold;
     font-size: 18px;
+
     transition: 0.3s;
 }
 
@@ -650,8 +480,11 @@ button:hover {
 footer {
     background: #0d47a1;
     color: white;
+
     text-align: center;
+
     padding: 25px 15px;
+
     margin-top: 30px;
 }
 
@@ -668,60 +501,75 @@ footer h3 {
         font-size: 27px;
     }
 
+
     nav {
         flex-direction: column;
         align-items: stretch;
     }
 
+
     nav a {
         text-align: center;
     }
+
 
     section {
         margin: 15px 10px;
         padding: 25px 15px;
     }
 
+
     section h2 {
         font-size: 23px;
     }
+
 
     #home h2 {
         font-size: 25px;
     }
 
 
-    /* Fees mobile cards */
+    /* Fees */
 
-    #fees h3 {
-        display: flex;
-        width: 100%;
-        min-width: 0;
-        min-height: 70px;
-        margin: 10px 0 0;
-    }
-
-    #fees h3 + p {
-        display: flex;
-        width: 100%;
-        min-width: 0;
-        min-height: 50px;
-        margin: 0 0 12px;
+    #fees {
+        padding: 25px 15px;
     }
 
 
-    /* Gallery mobile */
+    #fees h2 {
+        font-size: 26px;
+    }
+
+
+    .class-fee-btn {
+        padding: 15px 16px;
+        font-size: 17px;
+    }
+
+
+    .fee-details {
+        padding: 15px;
+    }
+
+
+    .discount-box {
+        font-size: 16px;
+    }
+
+
+    /* Gallery */
 
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+
 
     .gallery-card img {
         height: 230px;
     }
 
 
-    /* Admission button mobile */
+    /* Admission */
 
     .apply-btn {
         width: 100%;
