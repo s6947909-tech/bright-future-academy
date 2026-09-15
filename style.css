@@ -163,105 +163,166 @@ button:hover {
 }
 
 #fees h2 {
-    font-size: 28px;
+    color: #0d47a1;
+    font-size: 30px;
     margin-bottom: 8px;
 }
 
-#fees > p:first-of-type {
+.fees-note {
     color: #555;
     margin-bottom: 25px;
 }
 
 
-/* Fee cards container */
+/* ================= CLASS FEE LIST ================= */
 
-#fees {
-    display: block;
+.fee-class-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.fee-item {
+    margin-bottom: 12px;
 }
 
 
-/* Individual fee card */
+/* ================= CLASS BUTTON ================= */
 
-#fees h3 {
-    display: inline-flex;
-    vertical-align: top;
-    width: 21%;
-    min-width: 150px;
-    min-height: 120px;
-    margin: 8px 1%;
-    padding: 20px 15px;
-
-    background: white;
-    border: 1px solid #dbe9ff;
-    border-radius: 14px;
-
-    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.10);
-
-    color: #0d47a1;
-    font-size: 19px;
-
+.class-fee-btn {
+    width: 100%;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
 
+    padding: 16px 20px;
+
+    background: #eaf3ff;
+    color: #0d47a1;
+
+    border: 2px solid #d4e6ff;
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
     transition: 0.3s;
 }
 
-#fees h3:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.18);
+.class-fee-btn:hover {
+    background: #dcecff;
+    transform: translateY(-2px);
+}
+
+.class-fee-btn span {
+    font-size: 24px;
 }
 
 
-/* Fee amount */
+/* ================= FEE DETAILS ================= */
 
-#fees h3 + p {
-    display: inline-flex;
-    vertical-align: top;
+.fee-details {
+    display: none;
 
-    width: 21%;
-    min-width: 150px;
-    min-height: 60px;
+    margin-top: 8px;
+    padding: 18px;
 
-    margin: -55px 1% 15px;
+    background: white;
 
-    background: #eaf3ff;
-    border-radius: 10px;
+    border: 1px solid #dbe9ff;
+    border-radius: 12px;
 
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.10);
 
-    color: #0d47a1;
-    font-size: 17px;
+    text-align: left;
+
+    animation: feeOpen 0.25s ease;
 }
 
-
-/* Free admission box */
-
-#fees p:nth-last-of-type(2) {
-    margin-top: 20px;
-    padding: 15px;
-
-    background: #e8f5e9;
-    border-radius: 10px;
-
-    color: #1b5e20;
-    font-size: 18px;
+.fee-details.active {
+    display: block;
 }
 
+.fee-details h3 {
+    margin: 0 0 15px;
+    color: #1976d2;
+    text-align: center;
+}
 
-/* No hidden charges */
-
-#fees p:last-of-type {
+.fee-details p {
+    margin: 10px 0;
     padding: 12px;
 
-    background: #fff8e1;
-    border-radius: 10px;
+    background: #f4f8ff;
+    border-radius: 8px;
 
-    color: #795548;
-    font-weight: bold;
+    color: #333;
 }
 
+
+/* ================= ANIMATION ================= */
+
+@keyframes feeOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================= BOTTOM NOTICE ================= */
+
+.fee-bottom-notice {
+    margin-top: 25px;
+}
+
+.fee-bottom-notice p {
+    padding: 13px;
+    margin: 10px 0;
+
+    border-radius: 10px;
+}
+
+.fee-bottom-notice p:first-child {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+.fee-bottom-notice p:last-child {
+    background: #fff8e1;
+    color: #795548;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    #fees {
+        padding: 25px 15px;
+    }
+
+    #fees h2 {
+        font-size: 26px;
+    }
+
+    .class-fee-btn {
+        padding: 15px 16px;
+        font-size: 17px;
+    }
+
+    .fee-details {
+        padding: 15px;
+    }
+
+}
 
 /* ================= TEACHERS ================= */
 
