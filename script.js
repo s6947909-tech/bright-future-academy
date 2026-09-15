@@ -60,229 +60,113 @@ if (joinButton) {
 
 }
 
-/* ================= FEES ================= */
 
-#fees {
-    text-align: center;
-    background: linear-gradient(180deg, #ffffff, #f5f9ff);
-}
-
-#fees h2 {
-    color: #0d47a1;
-    font-size: 30px;
-    margin-bottom: 8px;
-}
-
-.fees-note {
-    color: #555;
-    margin-bottom: 25px;
-}
+/* ================= BRIGHT FUTURE ACADEMY ================= */
 
 
-/* ================= CLASS LIST ================= */
+/* ================= SMOOTH SCROLLING ================= */
 
-.fee-class-list {
-    max-width: 700px;
-    margin: 0 auto;
-}
+document.querySelectorAll('nav a').forEach(function(link) {
 
-.fee-item {
-    margin-bottom: 12px;
-}
+    link.addEventListener('click', function(event) {
+
+        const targetId = this.getAttribute('href');
+
+        const targetSection =
+            document.querySelector(targetId);
+
+        if (targetSection) {
+
+            event.preventDefault();
+
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+        }
+
+    });
+
+});
 
 
-/* ================= CLASS BUTTON ================= */
+/* ================= WELCOME MESSAGE ================= */
 
-.class-fee-btn {
-    width: 100%;
+console.log("Welcome to Bright Future Academy");
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    padding: 16px 20px;
+/* ================= JOIN BUTTON ================= */
 
-    background: #eaf3ff;
-    color: #0d47a1;
+const joinButton =
+    document.querySelector('#home button');
 
-    border: 2px solid #d4e6ff;
-    border-radius: 12px;
+if (joinButton) {
 
-    font-size: 18px;
-    font-weight: bold;
+    joinButton.addEventListener('click', function(event) {
 
-    cursor: pointer;
+        event.preventDefault();
 
-    transition: 0.3s;
-}
+        const admissionSection =
+            document.querySelector('#admission');
 
-.class-fee-btn:hover {
-    background: #dcecff;
-    transform: translateY(-2px);
-}
+        if (admissionSection) {
 
-.plus-icon {
-    font-size: 24px;
-    line-height: 1;
+            admissionSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+        }
+
+    });
+
 }
 
 
-/* ================= FEE DETAILS ================= */
+/* ================= FEES DROPDOWN ================= */
 
-.fee-details {
-    display: none;
+function toggleFee(feeId, button) {
 
-    margin-top: 8px;
-    padding: 18px;
+    const feeBox = document.getElementById(feeId);
 
-    background: white;
-
-    border: 1px solid #dbe9ff;
-    border-radius: 12px;
-
-    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.10);
-
-    text-align: left;
-
-    animation: feeOpen 0.25s ease;
-}
-
-.fee-details.active {
-    display: block;
-}
-
-
-/* ================= FEE HEADING ================= */
-
-.fee-details h3 {
-    margin: 0 0 15px;
-
-    color: #1976d2;
-
-    text-align: center;
-
-    font-size: 20px;
-}
-
-
-/* ================= FEE OPTIONS ================= */
-
-.fee-details p {
-    margin: 10px 0;
-
-    padding: 12px;
-
-    background: #f4f8ff;
-
-    border-radius: 8px;
-
-    color: #333;
-}
-
-
-/* ================= DISCOUNT ================= */
-
-.discount-box {
-    margin-top: 15px;
-
-    padding: 15px;
-
-    background: #fff8e1;
-
-    border: 2px solid #ffe082;
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    color: #795548;
-
-    font-size: 17px;
-
-    line-height: 1.6;
-}
-
-.discount-box span {
-    color: #d84315;
-
-    font-size: 18px;
-
-    font-weight: bold;
-}
-
-
-/* ================= ANIMATION ================= */
-
-@keyframes feeOpen {
-
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
+    if (!feeBox) {
+        return;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 
-}
+    /* Check whether the selected box is already open */
 
-
-/* ================= BOTTOM NOTICE ================= */
-
-.fee-bottom-notice {
-    max-width: 700px;
-
-    margin: 25px auto 0;
-}
-
-.fee-bottom-notice p {
-    padding: 13px;
-
-    margin: 10px 0;
-
-    border-radius: 10px;
-}
-
-.fee-bottom-notice p:first-child {
-    background: #e8f5e9;
-    color: #1b5e20;
-}
-
-.fee-bottom-notice p:nth-child(2) {
-    background: #f1f7ff;
-    color: #0d47a1;
-}
-
-.monthly-note {
-    background: #fff3e0;
-    color: #e65100;
-}
+    const isOpening =
+        !feeBox.classList.contains('active');
 
 
-/* ================= MOBILE ================= */
+    /* Close all fee boxes */
 
-@media (max-width: 600px) {
+    document.querySelectorAll('.fee-details').forEach(function(box) {
 
-    #fees {
-        padding: 25px 15px;
-    }
+        box.classList.remove('active');
 
-    #fees h2 {
-        font-size: 26px;
-    }
+    });
 
-    .class-fee-btn {
-        padding: 15px 16px;
-        font-size: 17px;
-    }
 
-    .fee-details {
-        padding: 15px;
-    }
+    /* Reset all icons */
 
-    .discount-box {
-        font-size: 16px;
+    document.querySelectorAll('.plus-icon').forEach(function(icon) {
+
+        icon.textContent = "⭕";
+
+    });
+
+
+    /* Open selected fee box */
+
+    if (isOpening) {
+
+        feeBox.classList.add('active');
+
+        button.querySelector('.plus-icon').textContent = "❌";
+
     }
 
 }
